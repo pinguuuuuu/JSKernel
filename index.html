@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        #screen {
+            display: block;
+            margin: 0 auto;
+            background-color: #000;
+            width: 1080px;
+            height: 720px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="screen"></canvas>
+    <script>
+        const canvas = document.getElementById('screen');
+        const ctx = canvas.getContext('2d');
+        canvas.width = canvas.clientWidth * devicePixelRatio;
+        canvas.height = canvas.clientHeight * devicePixelRatio;
+        ctx.scale(devicePixelRatio, devicePixelRatio);
+    </script>
+    <script src="./main.js" type="module"></script>
+</body>
+
+</html>
